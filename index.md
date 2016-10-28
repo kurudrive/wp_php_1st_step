@@ -482,6 +482,20 @@ global $wp_query;
 print '<pre style="text-align:left">';print_r( $wp_query );print '</pre>';
 ?>
 ~~~
+~~~
+<?php 
+global $wp_query;
+
+if ( $wp_query->query_vars['category_name'] == 'work-blog'){
+    echo '業務日記の時だけ表示しています。';
+}
+
+print '<pre>';print_r( $wp_query->query_vars['pagename'] );print '</pre>';
+print '<pre>';print_r( $wp_query );print '</pre>';
+
+?>
+~~~
+
 
 --- 
 

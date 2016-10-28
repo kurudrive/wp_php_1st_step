@@ -345,7 +345,7 @@ echo $a['cat'].'<br />';
 echo $a['posts_per_page'].'<br />';
 
 // 形式など詳細な情報を表示
-ver_dump($a);
+var_dump($a);
 
 // 中身を見やすく表示
 print '<pre style="text-align:left">';print_r($a);print '</pre>';

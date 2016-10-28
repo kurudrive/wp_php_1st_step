@@ -525,7 +525,7 @@ print '</pre>';
 ~~~
 <?php 
 $users = get_users();
-echo $users[0]->data->display_name;>
+echo $users[0]->data->display_name;?>
 ~~~
 
 特定の人物のみ情報を抽出するのであれば上記で良いが全員分表示したい。

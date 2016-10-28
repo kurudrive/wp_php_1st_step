@@ -239,6 +239,73 @@ if ( $a ) {
 
 ---
 
+# 関数を作ってみる
+
+functions.phpにphpの処理を記述
+
+~~~
+function the_page_info(){
+  echo '今表示しているページは ';
+  if ( is_front_page() ) {
+    echo 'トップページ';
+  } else if ( is_page() ) {
+    echo '固定ページ';
+  } else if ( is_single() ) {
+    echo '投稿詳細ページ';
+  } else if ( is_category() ) {
+    echo 'カテゴリーアーカイブページ';
+  } else if ( is_year() ) {
+    echo '年別アーカイブページ';
+  } else if ( is_search() ) {
+    echo '検索結果ページ';
+  } else if ( is_404() ) {
+    echo 'Not Foundページ';
+  }
+  echo ' です。';
+}
+~~~
+
+WordPressのテンプレートファイルに下記を記述
+~~~
+<?php the_page_info();?>
+~~~
+
+---
+
+## 変数に入れて値を返す
+
+~~~
+function get_page_info(){
+  $page_info = '今表示しているページは ';
+  if ( is_front_page() ) {
+    $page_info .= 'トップページ';
+  } else if ( is_page() ) {
+    $page_info .= '固定ページ';
+  } else if ( is_single() ) {
+    $page_info .= '投稿詳細ページ';
+  } else if ( is_category() ) {
+    $page_info .= 'カテゴリーアーカイブページ';
+  } else if ( is_year() ) {
+    $page_info .= '年別アーカイブページ';
+  } else if ( is_search() ) {
+    $page_info .= '検索結果ページ';
+  } else if ( is_404() ) {
+    $page_info .= 'Not Foundページ';
+  }
+  $page_info .= ' です。';
+  return $page_info;
+}
+~~~
+
+
+WordPressのテンプレートファイルに下記を記述
+
+~~~
+<?php echo get_page_info();?>
+~~~
+
+---
+
 # 変数（配列）
 
 <img src="img/wp_php_14.jpg" style="width:100%;" alt="変数（配列）"/>

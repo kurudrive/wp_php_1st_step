@@ -570,3 +570,7 @@ foreach ($users as $key => $user) {
 } ?>
 </ul>
 ~~~
+
+# エスケープ処理
+
+[エスケープ処理]('https://gist.github.com/kurudrive/09f37db0939d57df08c1')

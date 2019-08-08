@@ -38,6 +38,9 @@ function lightning_headfix_disabel(){
 <img src="img/wp_php_07.jpg" style="width:100%;" alt="echo"/>
 
 ~~~
+
+## 文字列 を表示する時は ' あるいは " でくくる
+
 <?php echo '表示します。' ?>
 ~~~
 
